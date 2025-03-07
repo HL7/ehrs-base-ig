@@ -1,0 +1,39 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "requirements-example",
+    "url": "http://hl7.org/ehrs/uv/base/StructureDefinition/requirements-example",
+    "name": "RequirementsExample",
+    "title": "requirements-example",
+    "description": "Requirements Statement Example",
+    "status": "active",
+    "publisher": "HL7",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Requirements"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/ehrs/uv/base/StructureDefinition/requirements-example"
+            },
+            {
+                "id": "Extension.value[x]",
+                "path": "Extension.value[x]",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    }
+}

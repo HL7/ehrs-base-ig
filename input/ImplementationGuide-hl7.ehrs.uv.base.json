@@ -1,0 +1,73 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.ehrs.uv.base",
+  "url": "http://hl7.org/ehrs/uv/base/ImplementationGuide/hl7.ehrs.uv.base",
+  "version": "2.0.1",
+  "name": "EHRSBASE",
+  "title": "Electronic Health Record System Functional Model Base",
+  "status": "active",
+  "experimental": false,
+  "publisher": "EHR WG",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/ehr"
+        }
+      ]
+    }
+  ],
+  "description": "This is the base for any EHR-System Functional Model, Functional Profiles are always based on a FM and therefor also based on this base.",
+  "packageId": "hl7.ehrs.uv.base",
+  "fhirVersion": [
+    "5.0.0"
+  ],
+  "definition": {
+    "page": {
+      "name": "index.html",
+      "generation": "markdown",
+      "title": "Home Page",
+      "page": [
+        {
+          "name": "validation.html",
+          "generation": "markdown",
+          "title": "Validation Rules"
+        },
+        {
+          "name": "downloads.html",
+          "generation": "markdown",
+          "title": "Useful Downloads"
+        },
+        {
+          "name": "changes.html",
+          "generation": "markdown",
+          "title": "IG Change History"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": {
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code": "releaselabel"
+        },
+        "value": "CI Build"
+      },
+      {
+        "code": {
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code": "copyrightyear"
+        },
+        "value": "2023"
+      },
+      {
+        "code": {
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+          "code": "shownav"
+        },
+        "value": "true"
+      }
+    ]
+  }
+}

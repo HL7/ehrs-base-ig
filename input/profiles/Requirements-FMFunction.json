@@ -1,0 +1,96 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "FMFunction",
+    "url": "http://hl7.org/ehrs/uv/base/StructureDefinition/FMFunction",
+    "status": "active",
+    "name": "FMFunction",
+    "title": "FMFunction",
+    "description": "This StructureDefinition represents the base EHR-S FM Function type",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Requirements",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Requirements",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Requirements",
+                "path": "Requirements",
+                "constraint": [
+                    {
+                        "key": "FMFLC08",
+                        "severity": "warning",
+                        "human": "Function names must not end with a period.",
+                        "expression": "title.endsWith('.').not()"
+                    },
+                    {
+                        "key": "FMFLC09",
+                        "severity": "error",
+                        "human": "Function must have a statement about its purpose.",
+                        "expression": "purpose"
+                    },
+                    {
+                        "key": "FMFLC10",
+                        "severity": "warning",
+                        "human": "Function purpose statement must end in a period.",
+                        "expression": "purpose.toString().endsWith('.')"
+                    },
+                    {
+                        "key": "FMFLC11",
+                        "severity": "error",
+                        "human": "Function must have a description.",
+                        "expression": "description"
+                    },
+                    {
+                        "key": "FMFLC12",
+                        "severity": "warning",
+                        "human": "Function description statement must end in a period.",
+                        "expression": "description.toString().endsWith('.')"
+                    },
+                    {
+                        "key": "FMFLC13",
+                        "severity": "error",
+                        "human": "Function must have one or more conformance criteria statements.",
+                        "expression": "statement.count() > 0"
+                    }
+                ]
+            },
+            {
+                "id": "Requirements.statement",
+                "path": "Requirements.statement",
+                "constraint": [
+                    {
+                        "key": "FMTSR03",
+                        "severity": "warning",
+                        "human": "The text is not single spaced (there are multiple spaces).",
+                        "expression": "requirement.toString().contains('  ').not()"
+                    },
+                    {
+                        "key": "FMCC001",
+                        "severity": "warning",
+                        "human": "The Conditional Criteria is not structured correctly.",
+                        "expression": "(conditionality and requirement.toString().startsWith('IF ').not()).not()"
+                    },
+                    {
+                        "key": "FMCC002",
+                        "severity": "warning",
+                        "human": "The Criteria is structured as conditional but conditional is not indicated.",
+                        "expression": "(conditionality.not() and requirement.toString().startsWith('IF ')).not()"
+                    },
+                    {
+                        "key": "FMSVR08",
+                        "severity": "warning",
+                        "human": "Optionality attribute does not match the optionality in the text.",
+                        "expression": "requirement.toString().contains(conformance.first())"
+                    },
+                    {
+                        "key": "FMFLC15",
+                        "severity": "error",
+                        "human": "Criterion must have a textual description.",
+                        "expression": "requirement.hasValue()"
+                    }
+                ]
+            }
+        ]
+    }
+}

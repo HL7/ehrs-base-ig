@@ -1,0 +1,14 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "FunctionalModel",
+    "url": "http://hl7.org/ehrs/uv/base/StructureDefinition/FunctionalModel",
+    "status": "active",
+    "name": "FunctionalModel",
+    "title": "FunctionalModel",
+    "description": "This StructureDefinition represents the base EHR-S FunctionalModel type",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Requirements",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Requirements",
+    "derivation": "constraint"
+}

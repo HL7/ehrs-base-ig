@@ -1,0 +1,9 @@
+node_modules/
+output/
+temp/
+template/
+input-cache/
+*/node_modules
+.~lock*
+.index.json
+.index.db

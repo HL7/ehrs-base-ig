@@ -1,0 +1,6 @@
+== Suppressed Messages ==
+# Don't know if we should
+% could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# Experimental in fhir core
+% which is experimental, but this structure is not labeled as experimental

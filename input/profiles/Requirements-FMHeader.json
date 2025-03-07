@@ -1,0 +1,60 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "FMHeader",
+    "url": "http://hl7.org/ehrs/uv/base/StructureDefinition/FMHeader",
+    "status": "active",
+    "name": "FMHeader",
+    "title": "FMHeader",
+    "description": "This StructureDefinition represents the base EHR-S FM Header type",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Requirements",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Requirements",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Requirements",
+                "path": "Requirements",
+                "constraint": [
+                    {
+                        "key": "FMHC002",
+                        "severity": "warning",
+                        "human": "The header should have a name.",
+                        "expression": "title"
+                    },
+                    {
+                        "key": "FMHC004",
+                        "severity": "error",
+                        "human": "Header must have a statement about its purpose.",
+                        "expression": "purpose"
+                    },
+                    {
+                        "key": "FMHC005",
+                        "severity": "warning",
+                        "human": "Header purpose statement must end in a period.",
+                        "expression": "purpose.toString().endsWith('.')"
+                    },
+                    {
+                        "key": "FMHC006",
+                        "severity": "error",
+                        "human": "Header must have a description.",
+                        "expression": "description"
+                    },
+                    {
+                        "key": "FMHC007",
+                        "severity": "warning",
+                        "human": "Header description statement must end in a period.",
+                        "expression": "description.toString().endsWith('.')"
+                    },
+                    {
+                        "key": "FMHC010",
+                        "severity": "error",
+                        "human": "A Header must not have criteria statements.",
+                        "expression": "statement.count() = 0"
+                    }
+                ]
+            }
+        ]
+    }
+}
