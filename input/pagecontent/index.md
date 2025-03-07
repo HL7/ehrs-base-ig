@@ -1,5 +1,5 @@
 <div class="dragon" markdown="1">
-This IG will be the basis for all EHRS-Family of IGs, the Functional Models and Functional Profiles.
+This IG will be the base of all EHRS-Family of IGs, the Functional Models and Functional Profiles.
 </div>
 
 ### Way of Working
@@ -13,7 +13,7 @@ explain ...
 - add examples
 - add test cases for validation
 
-#### Diagram
+#### FHIR IG Package Relations
 
 ```mermaid
 flowchart BT
@@ -23,8 +23,12 @@ flowchart BT
         fm2[hl7.ehrs.uv.phrsfmr2]-->a
         fm3[hl7.ehrs.uv.cmhaff]-->a
     end
+    fig["ehrs-rle (FHIR)"]--->fm1
     subgraph Functional Profiles
-        fp1[hl7.ehrs.uv.dentalfp]-->fm1
+        fp1[hl7.ehrs.uv.dhfp]-->fm1
+        fp2[hl7.ehrs.uv.ufp]-->fm1
+        fp3[hl7.ehrs.uv.pofp]-->fm1
+        fp4[hl7.ehrs.uv.pohr]-->fm1
     end
 ```
 
