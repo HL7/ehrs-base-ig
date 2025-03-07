@@ -30,6 +30,16 @@
       "title": "Home Page",
       "page": [
         {
+          "name": "scope.html",
+          "generation": "markdown",
+          "title": "Scope"
+        },
+        {
+          "name": "terms.html",
+          "generation": "markdown",
+          "title": "Terms and Definitions"
+        },
+        {
           "name": "validation.html",
           "generation": "markdown",
           "title": "Validation Rules"
@@ -38,11 +48,6 @@
           "name": "downloads.html",
           "generation": "markdown",
           "title": "Useful Downloads"
-        },
-        {
-          "name": "changes.html",
-          "generation": "markdown",
-          "title": "IG Change History"
         }
       ]
     },

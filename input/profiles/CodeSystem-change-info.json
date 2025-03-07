@@ -12,23 +12,28 @@
     "concept": [
         {
             "code": "NC",
-            "display": "No Change"
+            "display": "No Change",
+            "definition": "No Change"
         },
         {
             "code": "C",
-            "display": "Changed"
+            "display": "Changed",
+            "definition": "Changed"
         },
         {
             "code": "N",
-            "display": "New"
+            "display": "New",
+            "definition": "New"
         },
         {
             "code": "D",
-            "display": "Deleted"
+            "display": "Deleted",
+            "definition": "Deleted"
         },
         {
             "code": "DEP",
-            "display": "Deprecated"
+            "display": "Deprecated",
+            "definition": "Deprecated"
         }
     ]
 }

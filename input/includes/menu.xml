@@ -1,7 +1,9 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
-  <li><a href="artifacts.html">Artifacts</a></li>
+  <li><a href="scope.html">Scope</a></li>
+  <li><a href="terms.html">Terms and Definitions</a></li>
   <li><a href="validation.html">Validation Rules</a></li>
+  <li><a href="artifacts.html">Artifacts</a></li>
   <li><a href="downloads.html">Downloads</a></li>
 </ul>      
