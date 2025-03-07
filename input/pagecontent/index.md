@@ -13,7 +13,7 @@ explain ...
 - add examples
 - add test cases for validation
 
-#### FHIR IG Package Relations
+#### FHIR IG Package Relationships
 
 ```mermaid
 flowchart BT
