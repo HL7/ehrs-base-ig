@@ -1,5 +1,6 @@
-# ehrs-base-ig
 Base IG used for HL7-defined EHR-S product family implementation guides
+
+https://build.fhir.org/ig/HL7/ehrs-base-ig/
 
 ## Running the scipt and IG publisher
 
