@@ -15,6 +15,8 @@ explain ...
 
 #### FHIR IG Package Relationships
 
+@MZ TODO: linkjes tovoegen!
+
 ```mermaid
 flowchart BT
     a[hl7.ehrs.uv.base]-->b[hl7.ehrs.template]
@@ -30,6 +32,13 @@ flowchart BT
         fp3[hl7.ehrs.uv.pofp]-->fm1
         fp4[hl7.ehrs.uv.pohr]-->fm1
     end
+
+    click a "https://build.fhir.org/ig/HL7/ehrs-base-ig/" "ehrs-base-ig"
+    click b "https://github.com/HL7/ig-template-ehrs" "ig-template-ehrs"
+    click fm1 "https://build.fhir.org/ig/HL7/ehrsfm-ig/" "ehrsfm-ig"
+    click fm2 "https://build.fhir.org/ig/HL7/phrsfm-ig/" "phrsfm-ig"
+    click fm3 "https://build.fhir.org/ig/HL7/cmhaff-ig/" "cmhaff-ig"
+    click fig https://build.fhir.org/ig/HL7/ehrs-rle-ig/" "ehrs-rle-ig"
 ```
 
 ### Structure for each FM/FP IG 
