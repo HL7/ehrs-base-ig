@@ -47,6 +47,7 @@ A EHR-S Functional Model package includes both Informative and Normative section
 | -- | -- |
 | Informative <a href="https://hl7.org/fhir/versions.html#std-process" title="Informative Content" class="informative-flag">I</a> | Content of the EHR-S Functional Model Package that contains information which clarifies concepts or otherwise provides additional information to aid understanding and comprehension. Informative material is not balloted as part of the standard. |
 | Normative <a href="https://hl7.org/fhir/versions.html#std-process" title="Normative Content" class="normative-flag">N</a> | Content that is part of the EHR-S Functional Model which HL7 committee members and interested industry participants have formally reviewed and balloted following the HL7 procedures for Balloting Normative Documents. This HL7 developed Functional Model document has been successfully balloted as a normative standard by the HL7 organization. |
+{: .grid .table-striped}
 
 **Table 1: Normative Status Types**
 

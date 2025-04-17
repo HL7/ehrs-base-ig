@@ -73,6 +73,7 @@ The Function List (see [artifacts](artifacts.html)) includes the following compo
 | R1.1 Reference <a href="https://hl7.org/fhir/versions.html#std-process" title="Informative Content" class="informative-flag">I</a> | [statement.derivedFrom](https://hl7.org/fhir/R5/requirements-definitions.html#Requirements.statement.derivedFrom) | Reference to the previous version of the Functional Model is included to support transition from one version to the next. The first 2 digits indicate the source document; FM = Functional Model, LM = Lifecycle Model. The remainder of the reference is to the function and, if applicable, conformance criteria.
 | **New Content**<br/>Satisfied By | [statement.satisfiedBy](https://hl7.org/fhir/R5/requirements-definitions.html#Requirements.statement.satisfiedBy) | As a preview to EHR-S FM R3 we can populated the satisfiedBy for functions with a reference to the associated FHIR Resource or FHIR Profile. This is driven by the source/satisfiedBy.txt file that is used by the max2fhir script.
 | Change Indicator | [Extension](StructureDefinition-requirements-change-info.html) | The change indicator shows the change from previous versions. This will be valued as follows: <br/>C - Changed<br/>D - Deleted<br/>N - New<br/>NC - No Change |
+{: .grid .table-striped}
 
 #### Previously Hidden Content
 
