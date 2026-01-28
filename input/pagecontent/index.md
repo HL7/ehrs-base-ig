@@ -15,19 +15,27 @@ explain ...
 
 #### FHIR IG Package Relationships
 
-@MZ TODO: linkjes tovoegen!
-
 ```mermaid
 flowchart BT
-    a[hl7.ehrs.uv.base]-->b[hl7.ehrs.template]
+    classDef build stroke:green,stroke-width:4px;
+    classDef wip stroke:orange,stroke-width:4px;
+    fm1:::build
+    fm2:::build
+    b:::build
+    fm3:::wip
+    a:::wip
+    fp1:::build
+    fig:::build
+
+    a[hl7.ehrs.uv.core]-->b[hl7.ehrs.template]
     subgraph Functional Models
-        fm1[hl7.ehrs.uv.ehrsfmr2]-->a
-        fm2[hl7.ehrs.uv.phrsfmr2]-->a
-        fm3[hl7.ehrs.uv.cmhaff]-->a
+        fm1[hl7.ehrs.uv.ehrsfmr2]-.->a
+        fm2[hl7.ehrs.uv.phrsfmr2]-.->a
+        fm3[hl7.ehrs.uv.cmhaff]-.->a
     end
-    fig["ehrs-rle (FHIR)"]--->fm1
+    fig["ehrs-rle (FHIR)"]-.-fm1
     subgraph Functional Profiles
-        fp1[hl7.ehrs.uv.dhfp]-->fm1
+        fp1[hl7.ehrs.uv.dhfp]==>fm1
         fp2[hl7.ehrs.uv.ufp]-->fm1
         fp3[hl7.ehrs.uv.pofp]-->fm1
         fp4[hl7.ehrs.uv.pohr]-->fm1
@@ -38,8 +46,16 @@ flowchart BT
     click fm1 "https://build.fhir.org/ig/HL7/ehrsfm-ig/" "ehrsfm-ig"
     click fm2 "https://build.fhir.org/ig/HL7/phrsfm-ig/" "phrsfm-ig"
     click fm3 "https://build.fhir.org/ig/HL7/cmhaff-ig/" "cmhaff-ig"
+    click fp1 "https://build.fhir.org/ig/HL7/dhfp-ig/" "ehrsfm-ig"
     click fig https://build.fhir.org/ig/HL7/ehrs-rle-ig/" "ehrs-rle-ig"
 ```
+
+Legend
+* orange - WIP
+* green - build
+* line - some releationship
+* arrow - dependency
+* dotted array - should be dependency
 
 ### Structure for each FM/FP IG 
 
